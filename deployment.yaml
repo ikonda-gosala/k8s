@@ -18,4 +18,4 @@ spec:
       - name: hal-mitra-container
         image: konda33/hal_mitra:latest
         ports:
-        - containerPort: 30080
+        - containerPort: 80
