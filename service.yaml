@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: hal-mitra-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: hal-mitra
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30081
