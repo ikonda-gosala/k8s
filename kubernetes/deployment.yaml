@@ -1,1 +1,22 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hal-mitra
+  labels:
+    app: hal-mitra
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hal-mitra
+  template:
+    metadata:
+      labels:
+        app: hal-mitra
+    spec:
+      containers:
+      - name: hal-mitra-container
+        image: konda33/hal_mitra:latest
+        ports:
+        - containerPort: 5000
